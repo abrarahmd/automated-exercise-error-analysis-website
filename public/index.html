@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Representation Engineering: A Top-Down Approach to AI Transparency</title>
+    
+    <!-- Link to external CSS file -->
+    <link rel="stylesheet" href="style.css">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f8f9fa;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        header {
+            text-align: center;
+            padding: 60px 0 40px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            margin-bottom: 40px;
+        }
+
+        header h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            font-size: 1.3rem;
+            opacity: 0.9;
+            font-weight: 300;
+        }
+
+        .hero {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .hero h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: #2c3e50;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            color: #666;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .content {
+            margin-bottom: 60px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+
+        .card {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+        }
+
+        .card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: #2c3e50;
+        }
+
+        .card p {
+            color: #666;
+            line-height: 1.7;
+        }
+
+        .research {
+            background: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .research h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: #2c3e50;
+        }
+
+        .research p {
+            font-size: 1.1rem;
+            color: #666;
+        }
+
+        .research a {
+            color: #667eea;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .research a:hover {
+            text-decoration: underline;
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px 0;
+            color: #666;
+            border-top: 1px solid #eee;
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2rem;
+            }
+            
+            .subtitle {
+                font-size: 1.1rem;
+            }
+            
+            .hero h2 {
+                font-size: 1.8rem;
+            }
+            
+            .hero p {
+                font-size: 1rem;
+            }
+            
+            .card {
+                padding: 20px;
+            }
+            
+            .research {
+                padding: 30px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Representation Engineering</h1>
+            <p class="subtitle">A Top-Down Approach to AI Transparency</p>
+        </header>
+
+        <main>
+            <section class="hero">
+                <h2>Understanding and Controlling the Inner Workings of Neural Networks</h2>
+                <p>We identify and characterize the emerging area of representation engineering (RepE), an approach to enhancing the transparency of AI systems that draws on insights from cognitive neuroscience.</p>
+            </section>
+
+            <section class="content">
+                <div class="grid">
+                    <div class="card">
+                        <h3>What is RepE?</h3>
+                        <p>RepE places representations, rather than neurons or circuits, at the center of analysis, equipping us with novel methods for monitoring and manipulating high-level cognitive phenomena in deep neural networks.</p>
+                    </div>
+                    
+                    <div class="card">
+                        <h3>Transparency</h3>
+                        <p>We provide baselines and an initial analysis of RepE techniques, showing that they offer simple yet effective solutions for improving our understanding and control of large language models.</p>
+                    </div>
+                    
+                    <div class="card">
+                        <h3>Applications</h3>
+                        <p>This approach enables AI "mind reading and control" by performing top-down transparency analysis inspired by cognitive neuroscience methods.</p>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Video Comparison Section -->
+            <section class="video-comparison">
+                <h2>Video Analysis & Comparison</h2>
+                
+                <!-- Video Container -->
+                <div class="video-container">
+                    <!-- Reference Video Panel -->
+                    <div class="video-panel">
+                        <h3>Reference Video</h3>
+                        <div class="video-wrapper">
+                            <video class="video-element" id="referenceVideo" controls>
+                                <source src="" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                            <div class="video-placeholder" id="refPlaceholder">
+                                Click to upload reference video
+                            </div>
+                            <div class="upload-area" id="refUpload">
+                                <div class="upload-icon">📹</div>
+                                <div>Drop video here or click to browse</div>
+                                <input type="file" class="file-input" id="refFileInput" accept="video/*">
+                            </div>
+                        </div>
+                        <div class="controls">
+                            <button class="play-btn" id="refPlayBtn">Play</button>
+                            <span class="time-display" id="refTime">00:00 / 00:00</span>
+                            <div class="progress-bar" id="refProgressBar">
+                                <div class="progress-fill" id="refProgressFill"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- User Video Panel -->
+                    <div class="video-panel">
+                        <h3>User Video</h3>
+                        <div class="video-wrapper">
+                            <video class="video-element" id="userVideo" controls>
+                                <source src="" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                            <div class="video-placeholder" id="userPlaceholder">
+                                Click to upload user video
+                            </div>
+                            <div class="upload-area" id="userUpload">
+                                <div class="upload-icon">📹</div>
+                                <div>Drop video here or click to browse</div>
+                                <input type="file" class="file-input" id="userFileInput" accept="video/*">
+                            </div>
+                        </div>
+                        <div class="controls">
+                            <button class="play-btn" id="userPlayBtn">Play</button>
+                            <span class="time-display" id="userTime">00:00 / 00:00</span>
+                            <div class="progress-bar" id="userProgressBar">
+                                <div class="progress-fill" id="userProgressFill"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sync Controls -->
+                <div class="sync-controls">
+                    <button class="sync-btn" id="syncVideos">🔄 Sync Videos</button>
+                    <button class="analyze-btn" id="analyzeBtn">🔍 Analyze Keypoints</button>
+                </div>
+
+                <!-- Keypoints Container -->
+                <div class="keypoints-container">
+                    <!-- Reference Keypoints -->
+                    <div class="keypoints-panel">
+                        <h4>Reference Keypoints</h4>
+                        <div class="keypoints-content" id="refKeypoints">
+                            <div class="keypoint-item">
+                                <span class="keypoint-name">Nose</span>
+                                <span class="keypoint-coords">(142, 98)</span>
+                            </div>
+                            <div class="keypoint-item">
+                                <span class="keypoint-name">Left Eye</span>
+                                <span class="keypoint-coords">(128, 85)</span>
+                            </div>
+                            <div class="keypoint-item">
+                                <span class="keypoint-name">Right Eye</span>
+                                <span class="keypoint-coords">(156, 85)</span>
+                            </div>
+                            <div class="keypoint-item">
+                                <span class="keypoint-name">Left Shoulder</span>
+                                <span class="keypoint-coords">(98, 156)</span>
+                            </div>
+                            <div class="keypoint-item">
+                                <span class="keypoint-name">Right Shoulder</span>
+                                <span class="keypoint-coords">(186, 156)</span>
+                            </div>
+                            <div class="keypoint-item">
+                                <span class="keypoint-name">Left Elbow</span>
+                                <span class="keypoint-coords">(76, 198)</span>
+                            </div>
+                            <div class="keypoint-item">
+                                <span class="keypoint-name">Right Elbow</span>
+                                <span class="keypoint-coords">(208, 198)</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- User Keypoints -->
+                    <div class="keypoints-panel">
+                        <h4>User Keypoints</h4>
+                        <div class="keypoints-content" id="userKeypoints">
+                            <div class="keypoint-item">
+                                <span class="keypoint-name">Nose</span>
+                                <span class="keypoint-coords">(145, 102)</span>
+                            </div>
+                            <div class="keypoint-item">
+                                <span class="keypoint-name">Left Eye</span>
+                                <span class="keypoint-coords">(131, 89)</span>
+                            </div>
+                            <div class="keypoint-item">
+                                <span class="keypoint-name">Right Eye</span>
+                                <span class="keypoint-coords">(159, 89)</span>
+                            </div>
+                            <div class="keypoint-item">
+                                <span class="keypoint-name">Left Shoulder</span>
+                                <span class="keypoint-coords">(101, 159)</span>
+                            </div>
+                            <div class="keypoint-item">
+                                <span class="keypoint-name">Right Shoulder</span>
+                                <span class="keypoint-coords">(189, 159)</span>
+                            </div>
+                            <div class="keypoint-item">
+                                <span class="keypoint-name">Left Elbow</span>
+                                <span class="keypoint-coords">(79, 201)</span>
+                            </div>
+                            <div class="keypoint-item">
+                                <span class="keypoint-name">Right Elbow</span>
+                                <span class="keypoint-coords">(211, 201)</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Comparison Stats -->
+                <div class="comparison-stats">
+                    <h4>Comparison Analysis</h4>
+                    <div class="stats-grid">
+                        <div class="stat-item">
+                            <span class="stat-label">Similarity Score</span>
+                            <span class="stat-value">87.5%</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-label">Pose Accuracy</span>
+                            <span class="stat-value">92.1%</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-label">Timing Sync</span>
+                            <span class="stat-value">95.3%</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-label">Overall Match</span>
+                            <span class="stat-value">91.6%</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Feedback Section -->
+            <section class="feedback-section">
+                <h2 class="gradient-text">AI Feedback Summary</h2>
+                <div class="feedback-grid">
+                    <!-- Detailed Feedback -->
+                    <div class="feedback-card">
+                        <h3 class="gradient-text">Detailed Feedback</h3>
+                        <p id="detailedFeedback">
+                            • Left elbow is misaligned in 62 frames.<br>
+                            • Wrist joint is behind the reference posture.<br>
+                            • Timing deviation: 0.3s slower in transition.<br>
+                            • Knee bend angle off by ~12° during squat.
+                        </p>
+                    </div>
+            
+                    <!-- Summary Feedback -->
+                    <div class="feedback-card">
+                        <h3 class="gradient-text">Summary Feedback</h3>
+                        <p id="summaryFeedback">
+                            Your form is generally accurate, but slight delays and joint misalignments suggest the need for improved synchronization and posture precision—especially during transitional movements.
+                        </p>
+                    </div>
+                </div>
+            </section>
+            
+
+
+            <section class="research">
+                <h2>Research Paper</h2>
+                <p>Read the full research paper on arXiv: <a href="https://arxiv.org/abs/2310.01405" target="_blank">2310.01405</a></p>
+            </section>
+        </main>
+
+        <footer>
+            <p>&copy; 2024 AI Transparency Project</p>
+        </footer>
+    </div>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Smooth scroll for internal links
+            const links = document.querySelectorAll('a[href^="#"]');
+            
+            links.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+
+            // Add fade-in animation on scroll
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+
+            const observer = new IntersectionObserver(function(entries) {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, observerOptions);
+
+            // Apply animation to cards
+            const cards = document.querySelectorAll('.card, .research, .video-comparison');
+            cards.forEach(card => {
+                card.style.opacity = '0';
+                card.style.transform = 'translateY(20px)';
+                card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+                observer.observe(card);
+            });
+
+            // Add loading state
+            window.addEventListener('load', function() {
+                document.body.classList.add('loaded');
+            });
+
+            // Video upload functionality
+            setupVideoUpload('refFileInput', 'refUpload', 'referenceVideo', 'refPlaceholder');
+            setupVideoUpload('userFileInput', 'userUpload', 'userVideo', 'userPlaceholder');
+
+            function setupVideoUpload(inputId, uploadId, videoId, placeholderId) {
+                const fileInput = document.getElementById(inputId);
+                const uploadArea = document.getElementById(uploadId);
+                const video = document.getElementById(videoId);
+                const placeholder = document.getElementById(placeholderId);
+
+                // Click to upload
+                uploadArea.addEventListener('click', () => fileInput.click());
+
+                // File selection
+                fileInput.addEventListener('change', function(e) {
+                    const file = e.target.files[0];
+                    if (file) {
+                        const url = URL.createObjectURL(file);
+                        video.src = url;
+                        video.classList.add('active');
+                        uploadArea.style.display = 'none';
+                        placeholder.style.display = 'none';
+                    }
+                });
+
+                // Drag and drop
+                uploadArea.addEventListener('dragover', function(e) {
+                    e.preventDefault();
+                    uploadArea.classList.add('dragover');
+                });
+
+                uploadArea.addEventListener('dragleave', function(e) {
+                    e.preventDefault();
+                    uploadArea.classList.remove('dragover');
+                });
+
+                uploadArea.addEventListener('drop', function(e) {
+                    e.preventDefault();
+                    uploadArea.classList.remove('dragover');
+                    
+                    const files = e.dataTransfer.files;
+                    if (files.length > 0) {
+                        const file = files[0];
+                        if (file.type.startsWith('video/')) {
+                            const url = URL.createObjectURL(file);
+                            video.src = url;
+                            video.classList.add('active');
+                            uploadArea.style.display = 'none';
+                            placeholder.style.display = 'none';
+                        }
+                    }
+                });
+            }
+
+            // Sync videos functionality
+            document.getElementById('syncVideos').addEventListener('click', function() {
+                const refVideo = document.getElementById('referenceVideo');
+                const userVideo = document.getElementById('userVideo');
+                
+                if (refVideo.src && userVideo.src) {
+                    refVideo.currentTime = 0;
+                    userVideo.currentTime = 0;
+                    
+                    // Add visual feedback
+                    this.textContent = '✓ Videos Synced';
+                    this.style.background = 'linear-gradient(135deg, #28a745, #20c997)';
+                    
+                    setTimeout(() => {
+                        this.textContent = '🔄 Sync Videos';
+                        this.style.background = 'linear-gradient(135deg, #667eea, #764ba2)';
+                    }, 2000);
+                }
+            });
+
+            // Analyze keypoints functionality
+            document.getElementById('analyzeBtn').addEventListener('click', function() {
+                // Add loading state
+                this.textContent = '⏳ Analyzing...';
+                this.disabled = true;
+                
+                // Simulate analysis
+                setTimeout(() => {
+                    this.textContent = '✓ Analysis Complete';
+                    this.style.background = 'linear-gradient(135deg, #28a745, #20c997)';
+                    
+                    // Update stats with animation
+                    animateStats();
+                    
+                    setTimeout(() => {
+                        this.textContent = '🔍 Analyze Keypoints';
+                        this.style.background = 'linear-gradient(135deg, #f093fb, #f5576c)';
+                        this.disabled = false;
+                    }, 3000);
+                }, 2000);
+            });
+
+            function animateStats() {
+                const statValues = document.querySelectorAll('.stat-value');
+                statValues.forEach(stat => {
+                    const finalValue = stat.textContent;
+                    let currentValue = 0;
+                    const increment = parseFloat(finalValue) / 50;
+                    
+                    const interval = setInterval(() => {
+                        currentValue += increment;
+                        if (currentValue >= parseFloat(finalValue)) {
+                            stat.textContent = finalValue;
+                            clearInterval(interval);
+                        } else {
+                            stat.textContent = currentValue.toFixed(1) + '%';
+                        }
+                    }, 50);
+                });
+            }
+        });
+    </script>
+</body>
+</html>
