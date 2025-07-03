@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Representation Engineering: A Top-Down Approach to AI Transparency</title>
+    <link rel="stylesheet" href="style.css">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f8f9fa;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        header {
+            text-align: center;
+            padding: 60px 0 40px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            margin-bottom: 40px;
+        }
+
+        header h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            font-size: 1.3rem;
+            opacity: 0.9;
+            font-weight: 300;
+        }
+
+        .hero {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .hero h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: #2c3e50;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            color: #666;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .content {
+            margin-bottom: 60px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+
+        .card {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+        }
+
+        .card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: #2c3e50;
+        }
+
+        .card p {
+            color: #666;
+            line-height: 1.7;
+        }
+
+        .research {
+            background: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .research h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: #2c3e50;
+        }
+
+        .research p {
+            font-size: 1.1rem;
+            color: #666;
+        }
+
+        .research a {
+            color: #667eea;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .research a:hover {
+            text-decoration: underline;
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px 0;
+            color: #666;
+            border-top: 1px solid #eee;
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2rem;
+            }
+            
+            .subtitle {
+                font-size: 1.1rem;
+            }
+            
+            .hero h2 {
+                font-size: 1.8rem;
+            }
+            
+            .hero p {
+                font-size: 1rem;
+            }
+            
+            .card {
+                padding: 20px;
+            }
+            
+            .research {
+                padding: 30px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Celloscope Exercise Monitoring System</h1>
+            <p class="subtitle">Exercise feedback via vision-language models.</p>
+        </header>
+
+        <main>
+            <section class="hero">
+
+                <p>
+                    A system leveraging <strong>Vision-Language Models (VLMs)</strong> to assist users in performing exercises 
+                    correctly by comparing their execution against reference videos of expert demonstrations.
+                    The system uses frame-level visual and motion comparison, integrated with language-based 
+                    feedback, to generate <strong>natural language guidance</strong> that helps users improve 
+                    their form and reduce the risk of injury.
+                </p>
+            </section>
+
+            <section class="contributors">
+                <h2>Contributors</h2>
+                <div class="contributor-text">
+                    <p>
+                        Abrar Ahmed<sup>1</sup>, Shahriar Kabir<sup>2</sup>
+                    </p>
+                    <p class="affiliations">
+                        <sup>1</sup>Trainee-AI/ML, Celloscope <sup>2</sup>Senior AI Research Engineer, Celloscope
+                    </p>
+                </div>
+            </section>
+
+
+            <section class="content">
+                <div class="grid">
+                    <div class="card">
+                        <h3>What is Celloscope Exercise Monitoring System?</h3>
+                        <p>
+                            Celloscope Exercise Monitoring System is an intelligent system that helps users improve 
+                            their exercise form by analyzing video input and providing personalized feedback on workout 
+                            mistakes.
+                        </p>
+                    </div>
+                    
+                    <div class="card">
+                        <h3>How It Works?</h3>
+                        <p>
+                            The system first extracts 2D keypoints from both the user and reference workout videos. These 
+                            pose representations are then compared to detect alignment errors, independent of body type or 
+                            appearance.
+                        </p>
+                    </div>
+                    
+                    <div class="card">
+                        <h3>AI-Powered Feedback</h3>
+                        <p>
+                            We feed the pose comparison data into a vision-language model (VLM), which generates concise, 
+                            human-readable feedback on form issues and how to fix them — like a smart personal trainer.
+                        </p>
+                    </div>
+                </div>
+            </section>
+            
+            <section class="video-comparison">
+                <h2>Video Analysis & Comparison</h2>
+                
+                <div class="video-container">
+                    <div class="video-panel">
+                        <h3>Reference Video</h3>
+                        <div class="video-wrapper">
+                            <video class="video-element" id="referenceVideo" controls>
+                                <source src="reference.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                    </div>
+                    <div class="video-panel">
+                        <h3>User Video</h3>
+                        <div class="video-wrapper">
+                            <video class="video-element" id="userVideo" controls>
+                                <source src="user.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="sync-controls">
+
+                    <button class="analyze-btn" id="analyzeBtn">Compare Videos</button>
+                </div>
+            </section>
+
+
+                <!-- Keypoints Container -->
+                <div class="keypoints-container">
+                    <!-- Reference Keypoints -->
+                    <div class="keypoints-panel">
+                        <h4>Reference Keypoints</h4>
+                        <div class="keypoints-content" id="refKeypoints">
+                            <div class="keypoint-item">
+                                <span class="keypoint-name">Nose</span>
+                                <span class="keypoint-coords">(142, 98)</span>
+                            </div>
+                            <div class="keypoint-item">
+                                <span class="keypoint-name">Left Eye</span>
+                                <span class="keypoint-coords">(128, 85)</span>
+                            </div>
+                            <div class="keypoint-item">
+                                <span class="keypoint-name">Right Eye</span>
+                                <span class="keypoint-coords">(156, 85)</span>
+                            </div>
+                            <div class="keypoint-item">
+                                <span class="keypoint-name">Left Shoulder</span>
+                                <span class="keypoint-coords">(98, 156)</span>
+                            </div>
+                            <div class="keypoint-item">
+                                <span class="keypoint-name">Right Shoulder</span>
+                                <span class="keypoint-coords">(186, 156)</span>
+                            </div>
+                            <div class="keypoint-item">
+                                <span class="keypoint-name">Left Elbow</span>
+                                <span class="keypoint-coords">(76, 198)</span>
+                            </div>
+                            <div class="keypoint-item">
+                                <span class="keypoint-name">Right Elbow</span>
+                                <span class="keypoint-coords">(208, 198)</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- User Keypoints -->
+                    <div class="keypoints-panel">
+                        <h4>User Keypoints</h4>
+                        <div class="keypoints-content" id="userKeypoints">
+                            <div class="keypoint-item">
+                                <span class="keypoint-name">Nose</span>
+                                <span class="keypoint-coords">(145, 102)</span>
+                            </div>
+                            <div class="keypoint-item">
+                                <span class="keypoint-name">Left Eye</span>
+                                <span class="keypoint-coords">(131, 89)</span>
+                            </div>
+                            <div class="keypoint-item">
+                                <span class="keypoint-name">Right Eye</span>
+                                <span class="keypoint-coords">(159, 89)</span>
+                            </div>
+                            <div class="keypoint-item">
+                                <span class="keypoint-name">Left Shoulder</span>
+                                <span class="keypoint-coords">(101, 159)</span>
+                            </div>
+                            <div class="keypoint-item">
+                                <span class="keypoint-name">Right Shoulder</span>
+                                <span class="keypoint-coords">(189, 159)</span>
+                            </div>
+                            <div class="keypoint-item">
+                                <span class="keypoint-name">Left Elbow</span>
+                                <span class="keypoint-coords">(79, 201)</span>
+                            </div>
+                            <div class="keypoint-item">
+                                <span class="keypoint-name">Right Elbow</span>
+                                <span class="keypoint-coords">(211, 201)</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                
+            </section>
+            <!-- Feedback Section -->
+            <section class="feedback-section">
+                <h2 class="gradient-text">AI Feedback Summary</h2>
+                <div class="feedback-grid">
+
+                    <!-- Detailed Feedback -->
+                    <div class="feedback-card">
+                        <h3 class="gradient-text">Detailed Feedback</h3>
+                        <p id="detailedFeedback">
+                            The <strong>reference frames</strong> demonstrate proper workout form, while the <strong>user frames</strong> reveal several mistakes that need correction.<br><br>
+                            The user is <strong>pulling the neck forward</strong> in <strong>Frames 1 and 3</strong> instead of keeping it neutral and aligned with the spine, which can lead to strain and poor posture.<br><br>
+                            In <strong>Frame 2</strong>, the chin is <em>not tucked properly</em>, resulting in an extended neck posture that stresses the cervical spine. <strong>Frame 3</strong> shows noticeable <strong>bouncing and swinging</strong>, indicating the use of momentum rather than controlled, stable movement. This <em>reduces effectiveness</em> and <em>increases the risk of injury</em>.<br><br>
+                            The user also exhibits <strong>poor alignment</strong>: the hips are sagging in <strong>Frame 1</strong>, causing strain on the lower back; the shoulders are misaligned with the hips in <strong>Frame 2</strong>, suggesting a lack of core engagement; and the knees are misaligned with the toes in <strong>Frame 3</strong>, which can lead to knee strain.<br><br>
+                            Finally, a <strong>lack of core engagement</strong> is evident across all user frames, as shown by the unstable body position and sagging hips, failing to maintain a straight, stable line from head to heels. These issues combined highlight the need for improved <strong>posture</strong>, <strong>core activation</strong>, and <strong>deliberate, controlled movement</strong> throughout the exercise.
+                        </p>
+                    </div>
+
+
+            
+                    <!-- Summary Feedback -->
+                    <div class="feedback-card">
+                        <h3 class="gradient-text">Summary Feedback</h3>
+                        <p id="summaryFeedback">
+                            The workout appears to be a <strong>plank or similar core-strengthening exercise</strong>. The mistakes identified are pulling the neck, tucking the chin, using momentum, poor alignment (hips, shoulders, knees), and lack of core engagement.<br><br>
+                            To correct these mistakes and perform the exercise properly, follow these instructions:<br><br>
+                            <strong>Maintain Neutral Neck Posture:</strong> Keep your neck straight and aligned with your spine. Tuck your chin slightly to avoid extending your neck.<br><br>
+                            <strong>Engage Your Core:</strong> Tighten your abdominal muscles to keep your body stable and in a straight line. Avoid sagging hips or arching your lower back.<br><br>
+                            <strong>Avoid Using Momentum:</strong> Perform the exercise in a controlled manner without bouncing or swinging. Focus on using your muscles to move your body, not relying on momentum.<br><br>
+                            <strong>Ensure Proper Alignment:</strong> Keep your shoulders, hips, and knees aligned in a straight line. Ensure your knees are directly above your ankles.<br><br>
+                            <strong>Practice Mindful Movement:</strong> Focus on each movement to ensure it is deliberate and controlled. Slow down if necessary to maintain proper form.
+                        </p>
+                    </div>
+
+
+                </div>
+            </section>
+            
+        </main>
+
+        <footer>
+            <p>&copy; Celloscope Limited</p>
+        </footer>
+    </div>
+    <script src="script.js"></script>
+
+    
+</body>
+</html>
