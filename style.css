@@ -36,7 +36,7 @@
 }
 
 .contributors h2 {
-    font-size: 1.5rem;
+    font-size: 2rem;
     font-weight: 600;
     margin-bottom: 15px;
     color: #2c3e50;
@@ -52,7 +52,7 @@
 }
 
 .contributor-text p {
-    font-size: 0.8rem;
+    font-size: 1.1rem;
     line-height: 1.4;
     margin-bottom: 8px;
     color: #2c3e50;
@@ -62,11 +62,11 @@
 .contributor-text sup {
     color: #667eea;
     font-weight: 600;
-    font-size: 0.65em;
+    font-size: 0.75em;
 }
 
 .affiliations {
-    font-size: 0.7rem !important;
+    font-size: 0.9rem !important;
     color: #666 !important;
     font-weight: 400 !important;
     font-style: italic;

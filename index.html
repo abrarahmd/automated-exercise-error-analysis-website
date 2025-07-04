@@ -227,110 +227,59 @@
             
             <section class="video-comparison">
                 <h2>Video Analysis & Comparison</h2>
-                
+            
                 <div class="video-container">
+                    <!-- Reference Video 1 -->
                     <div class="video-panel">
-                        <h3>Reference Video</h3>
+                        <h3>Reference Video - Text Removed</h3>
                         <div class="video-wrapper">
-                            <video class="video-element" id="referenceVideo" controls>
+                            <video class="video-element" id="referenceVideo1" controls>
                                 <source src="reference.mp4" type="video/mp4">
                                 Your browser does not support the video tag.
                             </video>
                         </div>
                     </div>
+            
+                    <!-- Reference Video 2 -->
                     <div class="video-panel">
-                        <h3>User Video</h3>
+                        <h3>User Video - Text Removed</h3>
                         <div class="video-wrapper">
-                            <video class="video-element" id="userVideo" controls>
+                            <video class="video-element" id="referenceVideo2" controls>
                                 <source src="user.mp4" type="video/mp4">
                                 Your browser does not support the video tag.
                             </video>
                         </div>
                     </div>
+            
+                    <!-- User Video 1 -->
+                    <div class="video-panel">
+                        <h3>Reference Keypoints</h3>
+                        <div class="video-wrapper">
+                            <video class="video-element" id="userVideo1" controls>
+                                <source src="referenceKeypoints.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                    </div>
+            
+                    <!-- User Video 2 -->
+                    <div class="video-panel">
+                        <h3>User Keypoints</h3>
+                        <div class="video-wrapper">
+                            <video class="video-element" id="userVideo2" controls>
+                                <source src="userKeypoints.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                    </div>
                 </div>
-
+            
                 <div class="sync-controls">
-
-                    <button class="analyze-btn" id="analyzeBtn">Compare Videos</button>
+                    <button class="analyze-btn" id="analyzeBtn">Start Analysis</button>
                 </div>
             </section>
+            
 
-
-                <!-- Keypoints Container -->
-                <div class="keypoints-container">
-                    <!-- Reference Keypoints -->
-                    <div class="keypoints-panel">
-                        <h4>Reference Keypoints</h4>
-                        <div class="keypoints-content" id="refKeypoints">
-                            <div class="keypoint-item">
-                                <span class="keypoint-name">Nose</span>
-                                <span class="keypoint-coords">(142, 98)</span>
-                            </div>
-                            <div class="keypoint-item">
-                                <span class="keypoint-name">Left Eye</span>
-                                <span class="keypoint-coords">(128, 85)</span>
-                            </div>
-                            <div class="keypoint-item">
-                                <span class="keypoint-name">Right Eye</span>
-                                <span class="keypoint-coords">(156, 85)</span>
-                            </div>
-                            <div class="keypoint-item">
-                                <span class="keypoint-name">Left Shoulder</span>
-                                <span class="keypoint-coords">(98, 156)</span>
-                            </div>
-                            <div class="keypoint-item">
-                                <span class="keypoint-name">Right Shoulder</span>
-                                <span class="keypoint-coords">(186, 156)</span>
-                            </div>
-                            <div class="keypoint-item">
-                                <span class="keypoint-name">Left Elbow</span>
-                                <span class="keypoint-coords">(76, 198)</span>
-                            </div>
-                            <div class="keypoint-item">
-                                <span class="keypoint-name">Right Elbow</span>
-                                <span class="keypoint-coords">(208, 198)</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- User Keypoints -->
-                    <div class="keypoints-panel">
-                        <h4>User Keypoints</h4>
-                        <div class="keypoints-content" id="userKeypoints">
-                            <div class="keypoint-item">
-                                <span class="keypoint-name">Nose</span>
-                                <span class="keypoint-coords">(145, 102)</span>
-                            </div>
-                            <div class="keypoint-item">
-                                <span class="keypoint-name">Left Eye</span>
-                                <span class="keypoint-coords">(131, 89)</span>
-                            </div>
-                            <div class="keypoint-item">
-                                <span class="keypoint-name">Right Eye</span>
-                                <span class="keypoint-coords">(159, 89)</span>
-                            </div>
-                            <div class="keypoint-item">
-                                <span class="keypoint-name">Left Shoulder</span>
-                                <span class="keypoint-coords">(101, 159)</span>
-                            </div>
-                            <div class="keypoint-item">
-                                <span class="keypoint-name">Right Shoulder</span>
-                                <span class="keypoint-coords">(189, 159)</span>
-                            </div>
-                            <div class="keypoint-item">
-                                <span class="keypoint-name">Left Elbow</span>
-                                <span class="keypoint-coords">(79, 201)</span>
-                            </div>
-                            <div class="keypoint-item">
-                                <span class="keypoint-name">Right Elbow</span>
-                                <span class="keypoint-coords">(211, 201)</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                
-            </section>
             <!-- Feedback Section -->
             <section class="feedback-section">
                 <h2 class="gradient-text">AI Feedback Summary</h2>
